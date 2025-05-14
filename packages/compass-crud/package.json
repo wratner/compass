@@ -1,107 +1,27 @@
-{
-  "name": "@mongodb-js/compass-crud",
-  "description": "Compass Plugin for CRUD Operations",
-  "author": {
-    "name": "MongoDB Inc",
-    "email": "compass@mongodb.com"
-  },
-  "private": true,
-  "version": "13.50.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mongodb-js/compass.git"
-  },
-  "license": "SSPL",
-  "homepage": "https://github.com/mongodb-js/compass",
-  "bugs": {
-    "url": "https://jira.mongodb.org/projects/COMPASS/issues",
-    "email": "compass@mongodb.com"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/index.js",
-  "compass:main": "src/index.ts",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js"
-  },
-  "compass:exports": {
-    ".": "./src/index.ts"
-  },
-  "scripts": {
-    "bootstrap": "npm run compile",
-    "compile": "tsc -p tsconfig.json",
-    "typecheck": "tsc --noEmit",
-    "eslint": "eslint",
-    "prettier": "prettier",
-    "lint": "npm run eslint . && npm run prettier -- --check .",
-    "depcheck": "compass-scripts check-peer-deps && depcheck",
-    "check": "npm run typecheck && npm run lint && npm run depcheck",
-    "check-ci": "npm run check",
-    "test": "mocha",
-    "test-electron": "xvfb-maybe electron-mocha --no-sandbox",
-    "test-cov": "nyc --compact=false --produce-source-map=false -x \"**/*.spec.*\" --reporter=lcov --reporter=text --reporter=html npm run test",
-    "test-watch": "npm run test -- --watch",
-    "test-ci": "npm run test-cov",
-    "test-ci-electron": "npm run test-electron",
-    "reformat": "npm run eslint . -- --fix && npm run prettier -- --write ."
-  },
-  "devDependencies": {
-    "@mongodb-js/compass-test-server": "^0.3.1",
-    "@mongodb-js/eslint-config-compass": "^1.3.1",
-    "@mongodb-js/mocha-config-compass": "^1.6.1",
-    "@mongodb-js/prettier-config-compass": "^1.2.1",
-    "@mongodb-js/testing-library-compass": "^1.2.1",
-    "@mongodb-js/tsconfig-compass": "^1.2.1",
-    "@types/enzyme": "^3.10.14",
-    "@types/reflux": "^6.4.3",
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
-    "depcheck": "^1.4.1",
-    "electron": "^32.3.1",
-    "electron-mocha": "^12.2.0",
-    "enzyme": "^3.11.0",
-    "eslint": "^7.25.0",
-    "mocha": "^10.2.0",
-    "mongodb-instance-model": "^12.26.1",
-    "nyc": "^15.1.0",
-    "react-dom": "^17.0.2",
-    "sinon": "^8.1.1",
-    "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "@mongodb-js/compass-app-stores": "^7.36.1",
-    "@mongodb-js/compass-collection": "^4.49.1",
-    "@mongodb-js/compass-components": "^1.34.1",
-    "@mongodb-js/compass-connections": "^1.50.1",
-    "@mongodb-js/compass-editor": "^0.36.1",
-    "@mongodb-js/compass-field-store": "^9.25.1",
-    "@mongodb-js/compass-logging": "^1.6.1",
-    "@mongodb-js/compass-query-bar": "^8.51.1",
-    "@mongodb-js/compass-telemetry": "^1.4.1",
-    "@mongodb-js/compass-workspaces": "^0.31.1",
-    "@mongodb-js/explain-plan-helper": "^1.4.1",
-    "@mongodb-js/my-queries-storage": "^0.22.1",
-    "@mongodb-js/reflux-state-mixin": "^1.2.1",
-    "@mongodb-js/shell-bson-parser": "^1.2.0",
-    "ag-grid-community": "^20.2.0",
-    "ag-grid-react": "^20.2.0",
-    "bson": "^6.10.1",
-    "compass-preferences-model": "^2.33.1",
-    "hadron-app-registry": "^9.4.1",
-    "hadron-document": "^8.8.1",
-    "hadron-type-checker": "^7.4.1",
-    "jsondiffpatch": "^0.5.0",
-    "lodash": "^4.17.21",
-    "mongodb-data-service": "^22.25.1",
-    "mongodb-ns": "^2.4.2",
-    "mongodb-query-parser": "^4.3.0",
-    "numeral": "^2.0.6",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "reflux": "^0.4.1",
-    "semver": "^7.6.2"
-  },
-  "is_compass_plugin": true
-}
+ewogICJuYW1lIjogIkBtb25nb2RiLWpzL2NvbXBhc3MtY3J1ZCIsCiAgImRl
+c2NyaXB0aW9uIjogIkNvbXBhc3MgUGx1Z2luIGZvciBDUlVERCBPcmdhbml6YXRp
+b25zIiwKICAiYXV0aG9yIjogewogICAgIm5hbWUiOiAiTW9uZ29EQiIgaW5jIiwK
+ICAgICJlbWFpbCI6ICJjb21wYXNzQG1vbmduZGJjb20uY29tIiwKICAgIH0sCiAg
+InByaXZhdGUiOiB0cnVlLAogICJ2ZXJzaW9uIjogIjEzLjUwLjEiLAogICJyZXBv
+c2l0b3J5IjogewogICAgInR5cGUiOiAiZ2l0IiwKICAgICJ1cmwiOiAiaHR0cHM6
+Ly9naXRodWIuY29tL21vbmduZGItanMvY29tcGFzcy5naXQiCiAgfSwKICAibGlj
+ZW5zZSI6ICJTU1AWSiIsCiAgImhvbWVwYWdlIjogImh0dHBzOi8vZ2l0aHViLmNv
+bS9tb25nb2RiLWpzL2NvbXBhc3MiLAogICJidWdzIjogewogICAgInVybCI6ICJo
+dHRwczovL2ppcmEubW9uZ29kYi5vcmcvcHJvamVjdHMvQ09NUEFTUy9pc3N1ZXMi
+CiAgICAiZW1haWwiOiAiY29tcGFzc0BtYWluZ2VuZGJjb20uY29tIgogIH0sCiAg
+ImZpbGVzIjogWwogICAgImRpc3QiCiAgXSwKICAibWFpbiI6ICJkaXN0L2luZGV4
+LmpzIiwKICAiY29tcGFzczpteW1hcCI6ICJzcmMvaW5kZXguanMiLAogICJ0eXBl
+cyI6ICJkZXBhc3MiCiAgImV4cG9ydHMiOiB7CiAgICAiLiI6ICIuL3NyYy9pbmRl
+ci50cyIKICB9LAogICJzY3JpcHRzIjogewogICAgImJvb3RzdHJhcCI6ICJucG0g
+cnVuIGNvbXBpbGUiLAogICAgImNvbXBhc3M6bXltYXBpIjogInNyYy9pbmRlci50
+cyIsCiAgICAidHlwZXRlcnMiOiAiZGVwYXNzIiwKICAgICJleHBvcnRzIjogewog
+ICAgICAiLiI6ICIuL3NyYy9pbmRlci50cyIKICB9LAogICJzY3JpcHRzIjogewog
+ICAgImJvb3RzdHJhcCI6ICJucG0gcnVuIGNvbXBpbGUiLAogICAgImNvbXBhc3M6
+bXltYXBpIjogInNyYy9pbmRlci50cyIsCiAgICAidHlwZXRlcnMiOiAiZGVwYXNz
+IiwKICAgICJleHBvcnRzIjogewogICAgICAiLiI6ICIuL3NyYy9pbmRlci50cyIK
+ICB9LAogICJzY3JpcHRzIjogewogICAgImJvb3RzdHJhcCI6ICJucG0gcnVuIGNv
+bXBpbGUiLAogICAgImNvbXBhc3M6bXltYXBpIjogInNyYy9pbmRlci50cyIsCiAg
+ICAidHlwZXRlcnMiOiAiZGVwYXNzIiwKICAgICJleHBvcnRzIjogewogICAgICAi
+LiI6ICIuL3NyYy9pbmRlci50cyIKICB9LAogICJzY3JpcHRzIjogewogICAgImJv
+dH
+
